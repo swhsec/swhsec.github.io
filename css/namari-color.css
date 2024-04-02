@@ -128,6 +128,13 @@ a:hover, #header.nav-solid nav a:hover {
     background-size:cover;
 }
 
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 1024px) {
+    #banner {
+        background: none no-repeat center top;
+        background-size:cover;
+    }
+}
 
 /*------------------------------------------------------------------------------------------*/
 /* 5. Typography */
