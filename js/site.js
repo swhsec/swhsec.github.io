@@ -1,6 +1,31 @@
 "use strict";
 
 $(document).ready(function () {
+
+
+	var ul = document.getElementById('membersdiv');
+	let passaparzac = false;
+	for (var i = ul.children.length; i >= 0; i--) {
+		if (i===ul.children.length -3){
+			ul.appendChild(ul.children[0]);
+			passaparzac =true;
+		}else {
+			let s = Math.random() * i | 0;
+			if (!passaparzac && s===0){
+				s = Math.random() * i | 0;
+			}
+			if (!passaparzac && s===0){
+				s = Math.random() * i | 0;
+			}
+			if (!passaparzac && s===0){
+				s = Math.random() * i | 0;
+			}
+
+			ul.appendChild(ul.children[s]);
+
+		}
+	}
+
 	/* Video Lightbox */
 	if (!!$.prototype.simpleLightboxVideo) {
 		$('.video').simpleLightboxVideo();
